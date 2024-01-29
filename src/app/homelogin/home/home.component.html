@@ -1,0 +1,28 @@
+<div>
+    <div class="nav_container">
+        <h2>E.COM POC</h2>
+        <div class="nav_search">
+            <input type="text" name="search">
+            <button class="btn" (click)="routeToSearchResults()">Search</button>
+        </div>
+        <div>
+            <button class="btn" (click)="routeToRegisterPage()">Register</button>
+            <button class="btn" (click)="routeToLoginPage()">Login</button>
+        </div>
+    </div>
+    <div class="slide_container">
+        <div class="img_container">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                @for(image of images; track image.url) {
+                <div ngxSlickItem class="slide">
+                    <img class="slide_img" [src]="image.url" alt="home hero slide image" />
+                </div>
+                }
+            </ngx-slick-carousel>
+
+            <!-- <button class="btn" (click)="onPrev()"> Prev</button>
+            <button class="btn" (click)="onNext()"> Next</button> -->
+
+        </div>
+    </div>
+</div>

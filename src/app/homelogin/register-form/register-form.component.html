@@ -1,0 +1,42 @@
+<div>
+    <div>
+        <div class="nav_container">
+            <h2><a (click)="routeToHome()">E.COM POC</a></h2>
+            <div class="nav_search">
+                <input type="text" name="search">
+                <button class="btn" (click)="routeToSearchResults()">Search</button>
+            </div>
+            <div>
+                <!-- <button class="btn" (click)="routeToRegisterPage()">Register</button> -->
+                <button class="btn" (click)="routeToLoginPage()">Login</button>
+            </div>
+        </div>
+    </div>
+    <form action="#" class="form">
+        <!-- <img src="../../../assets/ecommerce-website-in-patna-500x500.webp"/> -->
+        <div class="container">
+            <h2>Register</h2>
+            <div class="in_con">
+                <label>Full Name</label>
+                <input class="in" type="text" [(ngModel)]="registerObj.name" name="Name"  placeholder="enter name">
+            </div>
+            <br />
+            <div class="in_con">
+                <label>Email</label>
+                <input class="in" type="email" [(ngModel)]="registerObj.email" name="Email"  placeholder="enter email">
+            </div>
+            <br />
+            <div class="in_con">
+                <label>User Name</label>
+                <input class="in" type="text" [(ngModel)]="registerObj.userName" name="UserName"  placeholder="enter user name">
+            </div>
+            <br />
+            <div class="in_con">
+                <label>Password</label>
+                <input class="in" type="text" [(ngModel)]="registerObj.password" name="Password"  placeholder="enter password">
+            </div>
+            <br />
+            <button class="f_btn" type="button" (click)="onSignUp()">Sign Up</button>
+        </div>
+    </form>
+</div>
